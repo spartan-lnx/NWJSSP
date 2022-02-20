@@ -1,3 +1,6 @@
+# Recuperado de:
+# https://www.localsolver.com/docs/last/exampletour/jobshop.html
+
 # The input files follow the "Taillard" format
 def read_instance(filename):
     with open(filename) as f:
