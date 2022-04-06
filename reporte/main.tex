@@ -138,7 +138,7 @@ Asignatura: \course \hfill Fecha: \textbf{04/04/2022}\\
 
 Se propone una representación basada en retardos, donde cada cromosoma es representado como un vector $D = [(d_1, J_1), (d_2, J_2), \ldots, (d_n, J_n)]$, $d_i \in \mathbb{N} , j_i \in J$, donde $d_i$ es el retardo asociado al trabajo $J_i$. Es decir, el tiempo de inicio de la primera operación del trabajo $J_i$ es igual a $d_i$ ($S_i\mu_{i0} = d_i$). 
 
-El cromosoma $c = [(0, 1), (16, 2), (17, 3), (38, 4), (3, 5), (44, 6)]$ representa una solución factible para la instancia ft06 (Fisher, 1963), la calendarización de las operaciones se muestra en la tabla \ref{tab:calendar}, el digrama de Gantt para este cromosoma se muestra en la figura \ref{fig:gant1}.
+El cromosoma $c = [(0, 1), (16, 2), (17, 3), (38, 4), (3, 5), (44, 6)]$ representa una solución factible para la instancia ft06 (Fisher, 1963)\cite{ft}, la calendarización de las operaciones se muestra en la tabla \ref{tab:calendar}, el digrama de Gantt para este cromosoma se muestra en la figura \ref{fig:gant1}.
 
 \begin{figure}[H]
     \centering
@@ -264,7 +264,7 @@ Se empleó una adaptación del algoritmo $UMDAc$  denominado FUMDAN (A Feasible 
     
 \section{Experimentos y Resultados}
 \subsection{Configuración Experimental}
-    El algoritmo propuesto fue programado utilizando el lenguaje de programación Python en su versión 3.10.4. Ejecutado en un ordenador con sistema operativo Arch Linux con kernel Linux versión 5.17.1, procesador AMD Ryzen 5 5600G @ 3.9 GHz y 16 GB de memoria RAM. El algoritmo fue evaluado en 5 instancias del ``job shop scheduling problem'' de Lawrence(1984) \cite{bksla40} y Fisher y Thompson (1963) \cite{bksft06}. Para cada instancia se realizaron 20 ejecuciones.
+    El algoritmo propuesto fue programado utilizando el lenguaje de programación Python en su versión 3.10.4. Ejecutado en un ordenador con sistema operativo Arch Linux con kernel Linux versión 5.17.1, procesador AMD Ryzen 5 5600G @ 3.9 GHz y 16 GB de memoria RAM. El algoritmo fue evaluado en 5 instancias del ``job shop scheduling problem'' de Lawrence(1984) \cite{la} y Fisher y Thompson (1963) \cite{ft}. Para cada instancia se realizaron 20 ejecuciones.
     
     El rendimiento del algoritmo se midió utilizando la desviación relativa porcentual (Percentage Relative Deviation, PRD) y la desviación relativa porcentual promedio (Average Percentage Relative Deviation, APRD) calculadas mediante las siguientes fórmulas:
     \begin{equation}
@@ -279,7 +279,7 @@ Se empleó una adaptación del algoritmo $UMDAc$  denominado FUMDAN (A Feasible 
     Los parámetros utilizados para probar el algoritmo son los siguientes: tamaño de la población igual a 60, número de generaciones igual a 30, tamaño del torneo igual a 5.
     
 \subsection{Resultados}
-    Los resultados obtenidos se muestran en la tabla \ref{tab:my_label} donde: ``Nombre'' corresponde al nombre de la instancia, (n, m) describe el tamaño de la instancia, donde n es el número de trabajos y m es el número de máquinas, ``BK'' el valor de la mejor solución conocida para la instancia, ``avg value'' y ``std value'' el valor promedio y la desviación estandar de los valores obtenidos por el algoritmo, ``avg time'' y ``std time'' el promedio y desviación estandar del tiempo de ejecución del algoritmo, ``best'' el mejor valor encontrado por el algoritmo, ``PRD'' la desviación relativa porcentual y ``APRD'' la desviación relativa porcentual promedio.
+    Los resultados obtenidos se muestran en la tabla \ref{tab:my_label} donde: ``Nombre'' corresponde al nombre de la instancia, (n, m) describe el tamaño de la instancia, donde n es el número de trabajos y m es el número de máquinas, ``BKS'' el valor de la mejor solución conocida, \cite{bksla40} para instancias de Lawrence y \cite{bksft06} para instancias de Fisher y Thompson, ``avg value'' y ``std value'' el valor promedio y la desviación estándar de los valores obtenidos por el algoritmo, ``avg time'' y ``std time'' el promedio y desviación estándar del tiempo de ejecución del algoritmo, ``best'' el mejor valor encontrado por el algoritmo, ``PRD'' la desviación relativa porcentual y ``APRD'' la desviación relativa porcentual promedio.
 
     
     \begin{table}[H]
